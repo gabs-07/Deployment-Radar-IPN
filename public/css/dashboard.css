@@ -1,0 +1,70 @@
+:root {
+    --ipn-guinda: #750946;
+    --ipn-black: #231F20;
+    --ipn-gray: #636569;
+    --ipn-white: #FFFFFF;
+    --card-shadow: 0 8px 32px rgba(117,9,70,0.08);
+}
+
+/* Estilos Instagram-like para el dashboard */
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.dashboard-card {
+    background: var(--ipn-white);
+    box-shadow: var(--card-shadow);
+    border-radius: 1.5rem;
+    padding: 2.5rem 2rem;
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.dashboard-avatar {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 4px solid var(--ipn-guinda);
+    object-fit: cover;
+    background: var(--ipn-white);
+}
+
+.dashboard-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dashboard-username {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--ipn-black);
+}
+
+.dashboard-stats {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.dashboard-stat {
+    text-align: center;
+}
+
+.dashboard-stat-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ipn-guinda);
+}
+
+.dashboard-stat-label {
+    color: var(--ipn-gray);
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}

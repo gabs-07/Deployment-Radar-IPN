@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados */
+.header-inner {
+    @apply flex justify-between items-center px-8 py-4 bg-white shadow-md rounded-b-lg mb-6;
+}
+
+.app-title {
+    @apply text-2xl font-extrabold text-pink-600 tracking-tight;
+}
+
+nav[aria-label="main navigation"] {
+    @apply flex gap-4 items-center;
+}
+
+a.btn-primary {
+    @apply bg-pink-600 text-white px-4 py-2 rounded-lg font-semibold shadow hover:bg-pink-700 transition;
+}
+
+a, button {
+    @apply text-gray-700 hover:text-pink-600 transition;
+}
+
+.card {
+    @apply bg-white rounded-xl shadow-lg p-8;
+}
+
+footer {
+    @apply text-center text-gray-400 py-6 mt-12 text-sm;
+}
+
+body {
+    @apply min-h-screen bg-gradient-to-br from-pink-50 to-purple-100;
+}

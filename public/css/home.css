@@ -1,0 +1,118 @@
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 28px;
+    margin-top: 32px;
+    padding: 0 10px;
+}
+
+.post-item {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    transition: box-shadow 0.2s;
+    aspect-ratio: 1 / 1.15;
+}
+
+.post-item:hover {
+    box-shadow: 0 8px 24px rgba(123,31,42,0.13);
+}
+
+.username-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 0;
+    padding-left: 0;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: #7b1f2a;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.username-link:hover {
+    color: #a8324a;
+    text-decoration: underline;
+}
+
+.post-item img {
+    width: 100%;
+    height: 100%;
+    max-height: 320px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0 0 14px 14px;
+    background: #f5f5f5;
+    transition: transform 0.2s;
+}
+
+.post-item a:last-child:hover img {
+    transform: scale(1.03);
+}
+
+.user-profile-link {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding-left: 14px;
+    margin: 10px 0 8px 0;
+}
+
+.profile-img {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+    margin-right: 0;
+}
+
+.mini-profile-img {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #e0e0e0;
+    background: #fafafa;
+    margin-right: 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .posts-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+        margin-top: 16px;
+        padding: 0 2px;
+    }
+    .post-item {
+        border-radius: 8px;
+    }
+    .username-link {
+        font-size: 0.95rem;
+        padding-left: 0;
+        margin: 0;
+        gap: 4px;
+    }
+    .user-profile-link {
+        padding-left: 4px;
+        gap: 4px;
+        margin: 6px 0 4px 0;
+    }
+    .profile-img {
+        width: 13px;
+        height: 13px;
+    }
+    .mini-profile-img {
+        width: 10px;
+        height: 10px;
+    }
+}

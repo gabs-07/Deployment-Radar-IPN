@@ -1,0 +1,94 @@
+#register {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+	padding: 2rem;
+	font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	background: #f8fafc;
+}
+
+#register > div:first-child img {
+	max-width: 100%;
+	height: auto;
+	border-radius: 8px;
+	display: block;
+}
+
+#register > div:last-child {
+	background: #ffffff;
+	padding: 1.25rem;
+	border-radius: 8px;
+	box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+	width: 100%;
+	max-width: 420px;
+}
+
+form label {
+	display: block;
+	font-weight: 700;
+	color: #4b5563;
+	margin-bottom: 0.35rem;
+	font-size: 0.9rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.6rem 0.75rem;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	font-size: 0.95rem;
+	margin-bottom: 0.75rem;
+	background: #fff;
+}
+
+form input[type="submit"] {
+	width: 100%;
+	padding: 0.75rem;
+	background: #8B0000; /* color principal IPN (rojo) */
+	color: #ffffff;
+	border: none;
+	border-radius: 6px;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+form input[type="submit"]:hover {
+	background: #640000; /* variante más oscura para hover */
+}
+
+/* Mensajes de error */
+form p {
+	margin: 0.5rem 0 0;
+	color: #b91c1c;
+	background: transparent;
+	padding: 0.35rem 0;
+	font-size: 0.9rem;
+	text-align: left;
+}
+
+.form-error {
+	background: #fee2e2;
+	color: #991b1b;
+	border: 1px solid #fca5a5;
+	padding: 0.45rem 0.6rem;
+	border-radius: 6px;
+	margin: 0.5rem 0 0;
+	font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+	#register {
+		align-items: center;
+	}
+	#register > div:first-child {
+		flex: 0 0 48%;
+	}
+	#register > div:last-child {
+		flex: 0 0 40%;
+	}
+}

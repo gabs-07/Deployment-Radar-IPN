@@ -4,14 +4,19 @@
     Editar Perfil: {{ auth()->user()->username }}
 @endsection
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('css/perfil.css') }}">
+@endpush
+
+
 
 @section('contenido')
-    <div class="md:flex md:justify-center">
-        <div class="md:w-1/2 bg-white shadow p-6">
-            <form method="POST" action="{{ route('perfil.store') }}" enctype="multipart/form-data" class="mt-10 md:mt-0">
+    <div class="perfil-container">
+        <div class="perfil-form-wrapper">
+            <form class="perfil-form" method="POST" action="{{ route('perfil.store') }}" enctype="multipart/form-data" >
                 @csrf
-                <div class="mb-5">
-                    <label for="username" class="mb-2 block uppercase text-gray-500 font-bold">
+                <div class="perfil-field mb-5">
+                    <label class="perfil-label" for="username">
                            Username
                     </label>
                     <input 
@@ -19,24 +24,24 @@
                         name="username"
                         type="text"
                         placeholder="Tu Nombre de Usuario"
-                        class="border p-3 w-full rounded-lg @error('username') border-red-500 @enderror"
+                        class="perfil-input @error('username') error-input @enderror"
                         value="{{ auth()->user()->username }}"
                     />
 
                     @error('username')
-                        <p class="bg-red-500 text-white my-2 rounded-lg text-sm p-2 text-center">{{ $message }} </p>
+                        <p class="error-message">{{ $message }} </p>
                     @enderror
                 </div>
 
-                <div class="mb-5">
-                    <label for="imagen" class="mb-2 block uppercase text-gray-500 font-bold">
+                <div class="perfil-field mb-5">
+                    <label class="perfil-label" for="imagen" >
                            Imagen Perfil
                     </label>
                     <input 
                         id="imagen"
                         name="imagen"
                         type="file"
-                        class="border p-3 w-full rounded-lg"
+                        class="perfil-input"
                         value=""
                         accept=".jpg, .jpeg, .png"
                     />
@@ -44,8 +49,8 @@
 
                 <input
                     type="submit"
+                    class="perfil-submit"
                     value="Guardar Cambios"
-                    class="bg-sky-600 hover:bg-sky-700 transition-colors cursor-pointer uppercase font-bold w-full p-3 text-white rounded-lg"
                 />
             </form>
         </div>

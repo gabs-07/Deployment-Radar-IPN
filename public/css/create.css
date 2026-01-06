@@ -150,3 +150,39 @@
         padding: 1rem 0.5rem;
     }
 }
+
+/* Mejor adaptación para teléfonos muy pequeños */
+@media (max-width: 480px) {
+    .create-container > div {
+        min-width: 100%;
+        flex-basis: 100%;
+        padding: 0;
+    }
+    .create-form-section {
+        padding: 0.7rem 0.3rem;
+        border-radius: 10px;
+        box-shadow: none;
+    }
+    .create-form label {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    .create-form input[type="text"],
+    .create-form textarea {
+        padding: 0.5rem 0.7rem;
+        font-size: 0.97rem;
+        margin-bottom: 0.8rem;
+        border-radius: 6px;
+    }
+    .create-form input[type="submit"] {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        border-radius: 6px;
+    }
+    #dropzone {
+        font-size: 1rem;
+        min-height: 110px;
+        padding: 0.7rem 0.2rem;
+        border-radius: 10px;
+    }
+}

@@ -14,7 +14,15 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'email' => 'required|email',
+            'email' => [
+                'required',
+                'email',
+                function ($attribute, $value, $fail) {
+                    if (!str_ends_with($value, '@alumno.ipn.mx')) {
+                        $fail('El correo debe ser del dominio @alumno.ipn.mx');
+                    }
+                }
+            ],
             'password' => 'required'
         ]);
 

@@ -26,10 +26,18 @@ class RegisterController extends Controller
         $request->validate([
             'name' => 'required|max:30',
             'username' => "required|unique:users|min:3|max:20",
-            'email' => 'required|unique:users|email|max:60',
+            'email' => [
+                'required',
+                'email',
+                'unique:users,email',
+                function ($attribute, $value, $fail) {
+                    if (!str_ends_with($value, '@alumno.ipn.mx')) {
+                        $fail('El correo debe ser del dominio @alumno.ipn.mx');
+                    }
+                }
+            ],
             'password' => 'required|confirmed|min:6'
         ]);
-
 
         User::create([
             'name' => $request->name,

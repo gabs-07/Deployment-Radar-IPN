@@ -19,7 +19,9 @@
 	<body class="bg-gray-100">
         <header>
             <div class="header-inner">
-                <div>
+
+                <div class="brand-group">
+                    <img src="{{ asset('img/logoIPN.png') }}" alt="Imagen registro de usuarios">
                     <a href="{{route('home')}}" class="app-title">Radar IPN</a>
                 </div>
 
@@ -35,9 +37,13 @@
                                 Nuevo Posts
                         </a>
 
-                        <a href="#">
-                            Hola: <span>{{auth()->user()->username}}</span>
-
+                        <a 
+                            href="{{ route('posts.index', auth()->user()->username ) }}"
+                        >
+                            Hola: 
+                            <span class="font-normal"> 
+                                {{ auth()->user()->username }}
+                            </span>
                         </a>
 
                         <form method="POST" action="{{ route('logout') }}">

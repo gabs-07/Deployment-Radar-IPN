@@ -25,7 +25,7 @@
                      <p class="dashboard-username">{{ $user->username }}</p>
 
 
-                @auth
+                 @auth
                     @if($user->id === auth()->user()->id)
                     <a class="dashboard-editar" href="{{route('perfil.index')}}" 
                         style="display: inline-flex; align-items: center; gap: 6px; background: #f5f5f5; border-radius: 6px; padding: 6px 12px; color: #333; font-weight: 500; text-decoration: none; border: 1px solid #ddd; transition: background 0.2s, box-shadow 0.2s;"
@@ -42,7 +42,7 @@
                 @endauth
                 </div>
 
-                <div class="dashboard-stats">
+                {{-- <div class="dashboard-stats">
                     <div class="dashboard-stat">
                         <div class="dashboard-stat-number">0</div>
                         <div class="dashboard-stat-label">Seguidores</div>
@@ -50,7 +50,7 @@
                     <div class="dashboard-stat">
                         <div class="dashboard-stat-number">0</div>
                         <div class="dashboard-stat-label">Siguiendo</div>
-                    </div>
+                    </div>  --}}
                     <div class="dashboard-stat">
                         <div class="dashboard-stat-number">{{$user->posts->count()}}</div>
                         
@@ -58,7 +58,7 @@
                     </div>
 
 
-                    @auth
+                    {{-- @auth
 
                     @if($user->id !==auth()->user()->id)
                         <form action="{{route('users.follow', $user)}}" method="POST">
@@ -75,7 +75,7 @@
 
                     @endif
                     @endauth
-                    
+                     --}}
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@
 
 
     <section>
-        <h2>publicaciones</h2>
+        <h2>Publicaciones</h2>
 
         @if($posts->count())
             <div class="publicaciones-grid">

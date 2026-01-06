@@ -10,7 +10,7 @@
 
 
 @section('contenido')
-    Contenido de la pagina
+    Poli Publicaciones
 
     @if($posts->count())
 

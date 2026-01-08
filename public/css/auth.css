@@ -34,7 +34,8 @@ form label {
 
 form input[type="text"],
 form input[type="email"],
-form input[type="password"] {
+form input[type="password"],
+form select {
 	width: 100%;
 	box-sizing: border-box;
 	padding: 0.6rem 0.75rem;
@@ -78,6 +79,37 @@ form p {
 	border-radius: 6px;
 	margin: 0.5rem 0 0;
 	font-size: 0.9rem;
+}
+
+/* Estilos para el select */
+form select {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 0.6rem 0.75rem;
+	border: 1px solid #d1d5db;
+	border-radius: 6px;
+	font-size: 0.95rem;
+	margin-bottom: 0.75rem;
+	background: #fff;
+	color: #374151;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+form select:focus {
+	border-color: #8B0000;
+	outline: none;
+}
+
+form optgroup {
+	font-weight: bold;
+	color: #8B0000;
+	background: #f3f4f6;
+}
+
+form option {
+	color: #374151;
 }
 
 /* Responsive */

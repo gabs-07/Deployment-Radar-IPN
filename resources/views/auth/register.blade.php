@@ -31,6 +31,7 @@
                         <p class="form-error" role="alert">{{ $message }} </p>
                     @enderror
                 </div>
+
                 <div>
                     <label for="username">
                         Username
@@ -48,6 +49,29 @@
                     @enderror
                 </div>
 
+                <div>
+                    <label for="escuela">
+                        Unidades Académica
+                    </label>
+                    <select id="escuela" name="escuela">
+                        <option value="">Selecciona tu escuela</option>
+                        <option value="ESCOM" {{ old('escuela') == 'ESCOM' ? 'selected' : '' }}>ESCOM</option>
+                        <option value="ESIME" {{ old('escuela') == 'ESIME' ? 'selected' : '' }}>ESIME</option>
+                        <option value="ESIT" {{ old('escuela') == 'ESIT' ? 'selected' : '' }}>ESIT</option>
+                        <option value="ESIQIE" {{ old('escuela') == 'ESIQIE' ? 'selected' : '' }}>ESIQIE</option>
+                        <option value="UPIICSA" {{ old('escuela') == 'UPIICSA' ? 'selected' : '' }}>UPIICSA</option>
+                        <option value="UPIITA" {{ old('escuela') == 'UPIITA' ? 'selected' : '' }}>UPIITA</option>
+                        <option value="ESFM" {{ old('escuela') == 'ESFM' ? 'selected' : '' }}>ESFM</option>
+                        <option value="ESCA" {{ old('escuela') == 'ESCA' ? 'selected' : '' }}>ESCA</option>
+                        <option value="Otra" {{ old('escuela') == 'Otra' ? 'selected' : '' }}>Otra</option>
+                    </select>
+                    @error('escuela')
+                        <p class="form-error" role="alert">{{ $message }}</p>
+                    @enderror
+                </div>
+
+
+                
                 <div>
                     <label for="email">
                         Email

@@ -36,13 +36,15 @@ class RegisterController extends Controller
                     }
                 }
             ],
-            'password' => 'required|confirmed|min:6'
+            'password' => 'required|confirmed|min:6',
+            'escuela' => 'required'
         ]);
 
         User::create([
             'name' => $request->name,
             'username' => $request->username,
             'email' => $request->email,
+            'escuela' => $request->escuela,
             'password' => Hash::make( $request->password )
         ]);
 

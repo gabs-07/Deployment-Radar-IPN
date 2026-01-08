@@ -1,10 +1,13 @@
 @extends('layouts.app')
 
 @section('titulo')
-<h1 style="display:none;">Perfil de: {{ $user->username }}</h1>
+Perfil {{ $user->username }}
 @endsection
 
 @section('contenido')
+
+<h1 style="display:none;">Perfil de: {{ $user->username }}</h1>
+
 
     <link rel="stylesheet" href="{{ asset('css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ asset('css/publicaciones.css') }}">
@@ -37,6 +40,10 @@
 </svg>
                         <span>Editar perfil</span>
                     </a>
+
+                    <p><strong> {{ $user->escuela }}</strong></p>
+
+                    <p><strong>Correo de contacto {{ $user->email }}</strong></p>
 
                     @endif
                 @endauth

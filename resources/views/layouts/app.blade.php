@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Radar IPN</title>
+        <title>Radar IPN | @yield('titulo')</title>
         @stack('styles')
         @stack('scripts')
         <!-- Fonts -->

@@ -23,7 +23,7 @@
                             alt="Foto de perfil de {{ $post->user->username }}"
                             class="mini-profile-img"
                         > --}}
-                        <span>{{ $post->user->username }}</span>
+                        <span>{{ $post->user->username }}  </span>
                     </a>
                     <a href="{{ route('posts.show', ['post' => $post, 'user' => $post->user]) }}">
                         <img src="{{ asset('uploads') . '/' . $post->imagen }}" alt="Imagen del post {{$post->titulo}}">
